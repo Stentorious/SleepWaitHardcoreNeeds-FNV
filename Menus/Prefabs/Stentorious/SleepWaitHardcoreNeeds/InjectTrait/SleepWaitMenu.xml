@@ -1,0 +1,77 @@
+<_SWHC+H2OS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2OS" /> </_SWHC+H2OS>
+<_SWHC+FODS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FODS" /> </_SWHC+FODS>
+<_SWHC+SLPS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPS" /> </_SWHC+SLPS>
+<_SWHC+H2O1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O1" /> </_SWHC+H2O1>
+<_SWHC+H2O2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O2" /> </_SWHC+H2O2>
+<_SWHC+H2O3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O3" /> </_SWHC+H2O3>
+<_SWHC+H2O4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O4" /> </_SWHC+H2O4>
+<_SWHC+H2O5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O5" /> </_SWHC+H2O5>
+<_SWHC+FOD1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD1" /> </_SWHC+FOD1>
+<_SWHC+FOD2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD2" /> </_SWHC+FOD2>
+<_SWHC+FOD3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD3" /> </_SWHC+FOD3>
+<_SWHC+FOD4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD4" /> </_SWHC+FOD4>
+<_SWHC+FOD5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD5" /> </_SWHC+FOD5>
+<_SWHC+SLP1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP1" /> </_SWHC+SLP1>
+<_SWHC+SLP2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP2" /> </_SWHC+SLP2>
+<_SWHC+SLP3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP3" /> </_SWHC+SLP3>
+<_SWHC+SLP4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP4" /> </_SWHC+SLP4>
+<_SWHC+SLP5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP5" /> </_SWHC+SLP5>
+<_SWHC+H2OD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2OD" /> </_SWHC+H2OD>
+<_SWHC+FODD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FODD" /> </_SWHC+FODD>
+<_SWHC+SLPD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPD" /> </_SWHC+SLPD>
+<_SWHC+SLPR> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPR" /> </_SWHC+SLPR>
+<_SWHC+AP> <copy src="sibling(HUDMainMenu)" trait="_SWHC+AP" /> </_SWHC+AP>
+<_SWHC+H2O> 0 </_SWHC+H2O>
+<_SWHC+FOD> 0 </_SWHC+FOD>
+<_SWHC+SLP> 0 </_SWHC+SLP>
+<_SWHC+HC> 0 </_SWHC+HC>
+<_SWHC+SW> 0 </_SWHC+SW>
+
+<_SWHC+UIMod>
+	<copy> 0 </copy>									<!-- Vanilla -->
+	<add src="sibling(HUDMainMenu)" trait="_DUIF3"/>	<!-- DarNUI -->
+	<add>
+		<copy> 3 </copy>
+		<onlyif>
+			<copy src="globals" trait="_VUI+Vegas"/>	<!-- VUI+ -->
+			<or src="globals" trait="_VUI+Version"/>
+		</onlyif>
+	</add>
+	<add>
+		<copy> -1 </copy>
+		<onlyif src="globals" trait="_VUI+"/>			<!-- Revelations -->
+	</add>
+	<add>
+		<copy> 2 </copy>
+		<onlyif src="globals" trait="_VUIE"/>			<!-- VUIE -->
+	</add>
+</_SWHC+UIMod>
+
+<!-- Vanilla -->
+<_SWHC+ySIWidth_0> 32 </_SWHC+ySIWidth_0>
+<_SWHC+ySIOffset_0> -5.5 </_SWHC+ySIOffset_0>
+
+<!-- DarNUI -->
+<_SWHC+ySIWidth_1> 21 </_SWHC+ySIWidth_1>
+<_SWHC+ySIOffset_1> 0 </_SWHC+ySIOffset_1>
+
+<!-- VUI+ -->
+<_SWHC+ySIWidth_2> 32 </_SWHC+ySIWidth_2>
+<_SWHC+ySIOffset_2> -5.5 </_SWHC+ySIOffset_2>
+
+<!-- VUI+ Revelations -->
+<_SWHC+ySIWidth_3> 32 </_SWHC+ySIWidth_3>
+<_SWHC+ySIOffset_3> -5.5 </_SWHC+ySIOffset_3>
+
+<!-- VUIE -->
+<_SWHC+ySIWidth_4> 24 </_SWHC+ySIWidth_4>
+<_SWHC+ySIOffset_4> -5 </_SWHC+ySIOffset_4>
+
+<_SWHC+ySIWidth>
+	<copy src="me()" trait="_SWHC+UIMod"/>
+	<copy src="me()" trait="_SWHC+ySIWidth_"/>
+</_SWHC+ySIWidth>
+<_SWHC+ySIOffset>
+	<copy src="me()" trait="_SWHC+UIMod"/>
+	<copy src="me()" trait="_SWHC+ySIOffset_"/>
+</_SWHC+ySIOffset>
