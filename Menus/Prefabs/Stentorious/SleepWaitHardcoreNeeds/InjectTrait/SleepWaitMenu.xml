@@ -16,16 +16,41 @@
 <_SWHC+SLP3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP3" /> </_SWHC+SLP3>
 <_SWHC+SLP4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP4" /> </_SWHC+SLP4>
 <_SWHC+SLP5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP5" /> </_SWHC+SLP5>
-<_SWHC+H2OD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2OD" /> </_SWHC+H2OD>
-<_SWHC+FODD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FODD" /> </_SWHC+FODD>
-<_SWHC+SLPD> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPD" /> </_SWHC+SLPD>
-<_SWHC+SLPR> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPR" /> </_SWHC+SLPR>
 <_SWHC+AP> <copy src="sibling(HUDMainMenu)" trait="_SWHC+AP" /> </_SWHC+AP>
 <_SWHC+H2O> 0 </_SWHC+H2O>
 <_SWHC+FOD> 0 </_SWHC+FOD>
 <_SWHC+SLP> 0 </_SWHC+SLP>
 <_SWHC+HC> 0 </_SWHC+HC>
 <_SWHC+SW> 0 </_SWHC+SW>
+
+<_SWHC+H2OD>
+	<copy> 120 </copy>
+	<div>
+		<copy> &-FHCDehydrationRate; </copy>
+		<max> 1 </max>
+	</div>
+	<floor></floor>
+</_SWHC+H2OD>
+<_SWHC+FODD>
+	<copy> 120 </copy>
+	<div>
+		<copy> &-FHCStarvationrate; </copy>
+		<max> 1 </max>
+	</div>
+	<floor></floor>
+</_SWHC+FODD>
+<_SWHC+SLPD>
+	<copy> 120 </copy>
+	<div>
+		<copy> &-FHCSleepDeprivationRate; </copy>
+		<max> 1 </max>
+	</div>
+	<floor></floor>
+</_SWHC+SLPD>
+<_SWHC+SLPR>
+	<copy> &-fHCSleepRestorationMod; </copy>
+	<floor></floor>
+</_SWHC+SLPR>
 
 <_SWHC+UIMod>
 	<copy> 0 </copy>									<!-- Vanilla -->

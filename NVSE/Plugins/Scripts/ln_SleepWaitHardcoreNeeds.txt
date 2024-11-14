@@ -15,9 +15,9 @@ if Goo1.AuxVarGetFlt "*SWHC_Init" != 1
 	endif
 
 	; Build needs strings
-	SetUIStringAlt "HUDMainMenu\_SWHC+H2OS" (GetStringGameSetting sStatsH20Abbrev + ":")
-	SetUIStringAlt "HUDMainMenu\_SWHC+FODS" (GetStringGameSetting sStatsFODAbbrev + ":")
-	SetUIStringAlt "HUDMainMenu\_SWHC+SLPS" (GetStringGameSetting sStatsSLPAbbrev + ":")
+	SetUIStringAlt "HUDMainMenu\_SWHC+H2OS" (GetStringSetting sStatsH20Abbrev + ":")
+	SetUIStringAlt "HUDMainMenu\_SWHC+FODS" (GetStringSetting sStatsFODAbbrev + ":")
+	SetUIStringAlt "HUDMainMenu\_SWHC+SLPS" (GetStringSetting sStatsSLPAbbrev + ":")
 
 	; Cache dehydration stages
 	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O1" (GetHardcoreStageThreshold water1)
@@ -39,12 +39,6 @@ if Goo1.AuxVarGetFlt "*SWHC_Init" != 1
 	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP3" (GetHardcoreStageThreshold sleep3)
 	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP4" (GetHardcoreStageThreshold sleep4)
 	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP5" (GetHardcoreStageThreshold sleep5)
-
-	; Cache needs progression per hour
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2OD" (Floor (120 / (GetMaxOf (GetGS FHCDehydrationRate) 1)))
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FODD" (Floor (120 / (GetMaxOf (GetGS FHCStarvationrate) 1)))
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLPD" (Floor (120 / (GetMaxOf (GetGS FHCSleepDeprivationRate) 1)))
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLPR" (Floor (GetGS fHCSleepRestorationMod))
 
 	; Init alpha pulse
 	SetUIFloatGradual "HUDMainMenu\_SWHC+AP" 0 0.85 1.5 2
