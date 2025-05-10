@@ -1,64 +1,64 @@
 ; Sleep Wait Hardcore Needs - Stentorious
 
 ; On game restart
-if Goo1.AuxVarGetFlt "*SWHC_Init" != 1
-	Goo1.AuxVarSetFlt "*SWHC_Init" 1
-
-	; Check for requirements
-	if GetPluginVersion "JohnnyGuitarNVSE" < 511
-		MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest JohnnyGuitar NVSE plugin."
-		return
-	endif
-	if GetPluginVersion "UI Organizer Plugin" < 230
-		MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest User Interface Organizer plugin."
-		return
-	endif
-
-	; Build needs strings
-	SetUIStringAlt "HUDMainMenu\_SWHC+H2OS" (GetStringSetting sStatsH20Abbrev + ":")
-	SetUIStringAlt "HUDMainMenu\_SWHC+FODS" (GetStringSetting sStatsFODAbbrev + ":")
-	SetUIStringAlt "HUDMainMenu\_SWHC+SLPS" (GetStringSetting sStatsSLPAbbrev + ":")
-
-	; Cache dehydration stages
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O1" (GetHardcoreStageThreshold water1)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O2" (GetHardcoreStageThreshold water2)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O3" (GetHardcoreStageThreshold water3)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O4" (GetHardcoreStageThreshold water4)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+H2O5" (GetHardcoreStageThreshold water5)
-
-	; Cache hunger stages
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FOD1" (GetHardcoreStageThreshold hunger1)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FOD2" (GetHardcoreStageThreshold hunger2)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FOD3" (GetHardcoreStageThreshold hunger3)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FOD4" (GetHardcoreStageThreshold hunger4)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+FOD5" (GetHardcoreStageThreshold hunger5)
-
-	; Cache sleep stages
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP1" (GetHardcoreStageThreshold sleep1)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP2" (GetHardcoreStageThreshold sleep2)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP3" (GetHardcoreStageThreshold sleep3)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP4" (GetHardcoreStageThreshold sleep4)
-	SetUIFloatAlt "HUDMainMenu\_SWHC+SLP5" (GetHardcoreStageThreshold sleep5)
-
-	; Init alpha pulse
-	SetUIFloatGradual "HUDMainMenu\_SWHC+AP" 0 0.85 1.5 2
-
-	; Init SWHC on SleepWaitMenu open
-	SetOnMenuOpenEventHandler (begin function {int iMenuID}
-		if Player.IsHardcore
-			SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
-			SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" (eval Sv_Find (GetStringSetting sSleep) (GetUIString "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_WaitButton\string") != -1)
-			SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
-			SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
-			SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
-		endif
-	end) 1 1012
-
-	; Update current time on sleep/wait start
-	SetJohnnyOnSleepWaitEventHandler 1 (begin function {int iMode}
-		if Player.IsHardcore
-			SetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time_main" (GetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time")
-		endif
-	end) 0 0
-
+if Goo1.AuxVarGetFlt "*SWHC_Init"
+	Return
 endif
+Goo1.AuxVarSetFlt "*SWHC_Init" 1
+
+; Check for requirements
+if GetPluginVersion "JohnnyGuitarNVSE" < 511
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest JohnnyGuitar NVSE plugin."
+	return
+endif
+if GetPluginVersion "UI Organizer Plugin" < 230
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest User Interface Organizer plugin."
+	return
+endif
+
+; Build needs strings
+SetUIStringAlt "HUDMainMenu\_SWHC+H2OS" (GetStringSetting sStatsH20Abbrev + ":")
+SetUIStringAlt "HUDMainMenu\_SWHC+FODS" (GetStringSetting sStatsFODAbbrev + ":")
+SetUIStringAlt "HUDMainMenu\_SWHC+SLPS" (GetStringSetting sStatsSLPAbbrev + ":")
+
+; Cache dehydration stages
+SetUIFloatAlt "HUDMainMenu\_SWHC+H2O1" (GetHardcoreStageThreshold water1)
+SetUIFloatAlt "HUDMainMenu\_SWHC+H2O2" (GetHardcoreStageThreshold water2)
+SetUIFloatAlt "HUDMainMenu\_SWHC+H2O3" (GetHardcoreStageThreshold water3)
+SetUIFloatAlt "HUDMainMenu\_SWHC+H2O4" (GetHardcoreStageThreshold water4)
+SetUIFloatAlt "HUDMainMenu\_SWHC+H2O5" (GetHardcoreStageThreshold water5)
+
+; Cache hunger stages
+SetUIFloatAlt "HUDMainMenu\_SWHC+FOD1" (GetHardcoreStageThreshold hunger1)
+SetUIFloatAlt "HUDMainMenu\_SWHC+FOD2" (GetHardcoreStageThreshold hunger2)
+SetUIFloatAlt "HUDMainMenu\_SWHC+FOD3" (GetHardcoreStageThreshold hunger3)
+SetUIFloatAlt "HUDMainMenu\_SWHC+FOD4" (GetHardcoreStageThreshold hunger4)
+SetUIFloatAlt "HUDMainMenu\_SWHC+FOD5" (GetHardcoreStageThreshold hunger5)
+
+; Cache sleep stages
+SetUIFloatAlt "HUDMainMenu\_SWHC+SLP1" (GetHardcoreStageThreshold sleep1)
+SetUIFloatAlt "HUDMainMenu\_SWHC+SLP2" (GetHardcoreStageThreshold sleep2)
+SetUIFloatAlt "HUDMainMenu\_SWHC+SLP3" (GetHardcoreStageThreshold sleep3)
+SetUIFloatAlt "HUDMainMenu\_SWHC+SLP4" (GetHardcoreStageThreshold sleep4)
+SetUIFloatAlt "HUDMainMenu\_SWHC+SLP5" (GetHardcoreStageThreshold sleep5)
+
+; Init alpha pulse
+SetUIFloatGradual "HUDMainMenu\_SWHC+AP" 0 0.85 1.5 2
+
+; Init SWHC on SleepWaitMenu open
+SetOnMenuOpenEventHandler (begin function {int iMenuID}
+	if Player.IsHardcore
+		SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
+		SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" (eval Sv_Find (GetStringSetting sSleep) (GetUIString "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_WaitButton\string") != -1)
+		SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
+		SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
+		SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
+	endif
+end) 1 1012
+
+; Update current time on sleep/wait start
+SetJohnnyOnSleepWaitEventHandler 1 (begin function {int iMode}
+	if Player.IsHardcore
+		SetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time_main" (GetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time")
+	endif
+end) 0 0
