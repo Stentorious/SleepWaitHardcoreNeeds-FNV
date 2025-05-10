@@ -1,7 +1,7 @@
 ; Sleep Wait Hardcore Needs - Stentorious
 
 ; On game restart
-if Goo1.AuxVarGetFlt "*SWHC_Init"
+if eval Goo1.AuxVarGetFlt "*SWHC_Init"
 	Return
 endif
 Goo1.AuxVarSetFlt "*SWHC_Init" 1
