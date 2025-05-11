@@ -1,0 +1,14 @@
+<target>
+	<not>
+		<copy src="H2O" trait="_value" />
+		<gte> 1000 </gte>
+		<or>
+			<copy src="FOD" trait="_value" />
+			<gte> 1000 </gte>
+		</or>
+		<or>
+			<copy src="SLP" trait="_value" />
+			<gte> 1000 </gte>
+		</or>
+	</not>
+</target>

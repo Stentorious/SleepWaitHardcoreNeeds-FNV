@@ -1,0 +1,157 @@
+<rect name="SWM_HardcoreNeeds">
+
+	<visible> <copy src="io()" trait="_SWHC+HC" /> </visible>
+	<locus> 1 </locus>
+	<x> <copy src="sibling(SWM_HoursChosen)" trait="x" /> </x>
+	<y>
+		<copy src="sibling(SWM_HoursChosen)" trait="y" />
+		<add src="sibling(SWM_HoursChosen)" trait="height" />
+		<add>
+			<copy src="sibling(SWM_HoursChosen)" trait="height" />
+			<div> 3 </div>
+		</add>
+	</y>
+	<font> <copy src="sibling(SWM_HoursChosen)" trait="font" /> </font>
+
+	<_time_main> 0 </_time_main>
+	<_time>
+		<copy src="me()" trait="_time_main" />
+		<add>
+			<copy src="sibling(SWM_Scrollbar)" trait="_current_value" />
+			<add> 1 </add>
+			<onlyifnot src="me()" trait="_time_main" />
+		</add>
+		<sub>
+			<copy src="sibling(SWM_Scrollbar)" trait="_current_value" />
+			<add> 1 </add>
+			<onlyif src="me()" trait="_time_main" />
+		</sub>
+	</_time>
+
+	<rect name="H2O">
+		<include src="Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\SWM_Template.xml" />
+		<x>
+			<copy src="sibling(FOD)" trait="x" />
+			<sub>
+				<copy src="io()" trait="_SWHC+ySIWidth" />
+				<mul>
+					<copy> 0 </copy>
+					<add>
+						<copy> 5.5 </copy>
+						<onlyifnot src="io()" trait="_SWHC+MAPMO" />
+					</add>
+					<add>
+						<copy> 4.2 </copy>
+						<onlyif src="io()" trait="_SWHC+MAPMO" />
+					</add>
+				</mul>
+				<add>
+					<copy> 30 </copy>
+					<onlyif>
+						<copy src="io()" trait="_SWHC+UIMod" />
+						<eq> 1 </eq>
+					</onlyif>
+				</add>
+			</sub>
+		</x>
+		<_value>
+			<copy src="io()" trait="_SWHC+H2OD" />
+			<mul src="parent()" trait="_time" />
+			<add src="io()" trait="_SWHC+H2O" />
+		</_value>
+		<_stage_1> <copy src="io()" trait="_SWHC+H2O1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_SWHC+H2O2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_SWHC+H2O3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_SWHC+H2O4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_SWHC+H2O5" /> </_stage_5>
+		<_label> <copy src="io()" trait="_SWHC+H2OS" /> </_label>
+		<_icon> MAPMO\water.dds </_icon>
+	</rect>
+
+	<text name="FOD">
+		<include src="Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\SWM_Template.xml" />
+		<x>
+			<copy> 0 </copy>
+			<sub>
+				<copy src="child(Label)" trait="width" />
+				<mul> 1.138 </mul>
+				<onlyifnot src="io()" trait="_SWHC+MAPMO" />
+			</sub>
+			<sub>
+				<copy src="child(Icon)" trait="width" />
+				<mul> 1.3 </mul>
+				<onlyif src="io()" trait="_SWHC+MAPMO" />
+			</sub>
+		</x>
+		<_value>
+			<copy src="io()" trait="_SWHC+FODD" />
+			<mul src="parent()" trait="_time" />
+			<add src="io()" trait="_SWHC+FOD" />
+		</_value>
+		<_stage_1> <copy src="io()" trait="_SWHC+FOD1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_SWHC+FOD2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_SWHC+FOD3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_SWHC+FOD4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_SWHC+FOD5" /> </_stage_5>
+		<_label> <copy src="io()" trait="_SWHC+FODS" /> </_label>
+		<_icon> MAPMO\food.dds </_icon>
+	</text>
+
+	<text name="SLP">
+		<include src="Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\SWM_Template.xml" />
+		<x>
+			<copy src="sibling(FOD)" trait="x" />
+			<add>
+				<copy src="io()" trait="_SWHC+ySIWidth" />
+				<mul>
+					<copy> 0 </copy>
+					<add>
+						<copy> 5.5 </copy>
+						<onlyifnot src="io()" trait="_SWHC+MAPMO" />
+					</add>
+					<add>
+						<copy> 4.2 </copy>
+						<onlyif src="io()" trait="_SWHC+MAPMO" />
+					</add>
+				</mul>
+				<add>
+					<copy> 30 </copy>
+					<onlyif>
+						<copy src="io()" trait="_SWHC+UIMod" />
+						<eq> 1 </eq>
+					</onlyif>
+				</add>
+			</add>
+		</x>
+		<_value>
+			<copy> 0 </copy>
+			<add>
+				<copy src="io()" trait="_SWHC+SLPD" />
+				<onlyifnot src="io()" trait="_SWHC+SW" />
+			</add>
+			<sub>
+				<copy src="io()" trait="_SWHC+SLPR" />
+				<onlyif src="io()" trait="_SWHC+SW" />
+			</sub>
+			<mul src="parent()" trait="_time" />
+			<add src="io()" trait="_SWHC+SLP" />
+			<add>
+				<copy src="io()" trait="_SWHC+SLPD" />
+				<sub>
+					<copy src="io()" trait="_SWHC+SLPD" />
+					<onlyifnot src="parent()" trait="_time" />
+				</sub>
+				<onlyif src="io()" trait="_SWHC+SW" />
+			</add>
+			<max> <copy src="io()" trait="_SWHC+SLPD" /> </max>
+		</_value>
+		<_stage_1> <copy src="io()" trait="_SWHC+SLP1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_SWHC+SLP2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_SWHC+SLP3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_SWHC+SLP4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_SWHC+SLP5" /> </_stage_5>
+		<_label> <copy src="io()" trait="_SWHC+SLPS" /> </_label>
+		<_icon> MAPMO\sleep.dds </_icon>
+	</text>
+
+</rect>

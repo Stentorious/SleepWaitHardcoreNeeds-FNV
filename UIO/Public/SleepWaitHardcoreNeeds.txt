@@ -1,8 +1,8 @@
-Stentorious\SleepWaitHardcoreNeeds\InjectTrait\HUDMainMenu.xml::HUDMainMenu
+Stentorious\SleepWaitHardcoreNeeds\HUDMainMenu\_Root.xml::HUDMainMenu
 true
-Stentorious\SleepWaitHardcoreNeeds\InjectTrait\SleepWaitMenu.xml::SleepWaitMenu
+Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\_Root.xml::SleepWaitMenu
 true
-Stentorious\SleepWaitHardcoreNeeds\InjectTrait\SWM_WaitButton.xml::SleepWaitMenu::SWM_WaitButton
+Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\SWM_WaitButton.xml::SleepWaitMenu::SWM_WaitButton
 true
-Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu.xml::SleepWaitMenu::SWM_MainRect
+Stentorious\SleepWaitHardcoreNeeds\SleepWaitMenu\SWM_HardcoreNeeds.xml::SleepWaitMenu::SWM_MainRect
 true

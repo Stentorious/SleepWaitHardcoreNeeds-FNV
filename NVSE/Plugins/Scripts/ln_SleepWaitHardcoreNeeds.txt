@@ -16,6 +16,9 @@ if GetPluginVersion "UI Organizer Plugin" < 230
 	return
 endif
 
+; Load INI settings
+SetUIFloatAlt "HUDMainMenu\_SWHC+MAPMO" (eval IsModLoaded "Main And Pause Menus Overhaul.esm" && GetINIFloat "General:bMAPMOIconsSupport" "Stentorious\SleepWaitHardcoreNeeds.ini")
+
 ; Build needs strings
 SetUIStringAlt "HUDMainMenu\_SWHC+H2OS" (GetStringSetting sStatsH20Abbrev + ":")
 SetUIStringAlt "HUDMainMenu\_SWHC+FODS" (GetStringSetting sStatsFODAbbrev + ":")

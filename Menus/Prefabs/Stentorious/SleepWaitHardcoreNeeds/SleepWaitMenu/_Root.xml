@@ -17,6 +17,7 @@
 <_SWHC+SLP4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP4" /> </_SWHC+SLP4>
 <_SWHC+SLP5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP5" /> </_SWHC+SLP5>
 <_SWHC+AP> <copy src="sibling(HUDMainMenu)" trait="_SWHC+AP" /> </_SWHC+AP>
+<_SWHC+MAPMO> <copy src="sibling(HUDMainMenu)" trait="_SWHC+MAPMO" /> </_SWHC+MAPMO>
 <_SWHC+H2O> 0 </_SWHC+H2O>
 <_SWHC+FOD> 0 </_SWHC+FOD>
 <_SWHC+SLP> 0 </_SWHC+SLP>

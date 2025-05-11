@@ -1,0 +1,128 @@
+<locus> 1 </locus>
+
+<text name="Label">
+	<visible> <not src="io()" trait="_SWHC+MAPMO" /> </visible>
+	<font> <copy src="grandparent()" trait="font" /> </font>
+	<justify> &left; </justify>
+	<string> <copy src="parent()" trait="_label" /> </string>
+</text>
+
+<image name="Icon">
+	<visible> <copy src="io()" trait="_SWHC+MAPMO" /> </visible>
+	<y>
+		<copy> 3 </copy>
+		<onlyif>
+			<copy src="io()" trait="_SWHC+UIMod" />
+			<eq> 1 </eq>
+		</onlyif>
+		<sub>
+			<copy src="me()" trait="height" />
+			<div> 4.1 </div>
+		</sub>
+	</y>
+	<width>
+		<copy src="io()" trait="_SWHC+ySIWidth" />
+		<div> 4 </div>
+		<add src="io()" trait="_SWHC+ySIWidth" />
+	</width>
+	<height> <copy src="me()" trait="width" /> </height>
+	<zoom> &scale; </zoom>
+	<filename> <copy src="parent()" trait="_icon" /> </filename>
+</image>
+
+<text name="Value">
+	<alpha>
+		<copy> 255 </copy>
+		<mul>
+			<copy> 1 </copy>
+			<sub>
+				<copy src="io()" trait="_SWHC+AP" />
+				<onlyif>
+					<copy src="parent()" trait="_value" />
+					<gte src="parent()" trait="_stage_4" />
+				</onlyif>
+			</sub>
+		</mul>
+	</alpha>
+	<x>
+		<copy> 0 </copy>
+		<add>
+			<copy src="sibling(Label)" trait="width" />
+			<mul> 2.2 </mul>
+			<onlyifnot src="io()" trait="_SWHC+MAPMO" />
+		</add>
+		<add>
+			<copy src="sibling(Icon)" trait="width" />
+			<mul> 2.45 </mul>
+			<add>
+				<copy> 16 </copy>
+				<onlyif>
+					<copy src="io()" trait="_SWHC+UIMod" />
+					<eq> 1 </eq>
+				</onlyif>
+			</add>
+			<onlyif src="io()" trait="_SWHC+MAPMO" />
+		</add>
+	</x>
+	<systemcolor> 0 </systemcolor>
+	<red>
+		<copy> 0 </copy>
+		<add>
+			<copy src="parent()" trait="_value" />
+			<div src="parent()" trait="_stage_1" />
+			<mul> 255 </mul>
+		</add>
+		<max> 0 </max>
+		<min> 255 </min>
+	</red>
+	<green>
+		<copy> 255 </copy>
+		<sub>
+			<copy src="parent()" trait="_value" />
+			<sub src="parent()" trait="_stage_1" />
+			<div>
+				<copy src="parent()" trait="_stage_2" />
+				<sub src="parent()" trait="_stage_1" />
+			</div>
+			<mul> 127.5 </mul>
+			<max> 0 </max>
+			<min> 127.5 </min>
+		</sub>
+		<sub>
+			<copy src="parent()" trait="_value" />
+			<sub src="parent()" trait="_stage_2" />
+			<div>
+				<copy src="parent()" trait="_stage_3" />
+				<sub src="parent()" trait="_stage_2" />
+			</div>
+			<mul> 127.5 </mul>
+			<max> 0 </max>
+			<min> 127.5 </min>
+		</sub>
+	</green>
+	<blue> 0 </blue>
+	<font> <copy src="grandparent()" trait="font" /> </font>
+	<justify> &right; </justify>
+	<string> <copy src="parent()" trait="_value" /> </string>
+</text>
+
+<image name="Skull">
+	<visible>
+		<copy src="parent()" trait="_value" />
+		<gte src="parent()" trait="_stage_5" />
+	</visible>
+	<alpha> <copy src="sibling(Value)" trait="alpha" /> </alpha>
+	<x>
+		<copy src="sibling(Value)" trait="x" />
+		<add> 2 </add>
+	</x>
+	<y> <copy src="io()" trait="_SWHC+ySIOffset" /> </y>
+	<width> <copy src="io()" trait="_SWHC+ySIWidth" /> </width>
+	<height> <copy src="me()" trait="width" /> </height>
+	<zoom> &scale; </zoom>
+	<systemcolor> 0 </systemcolor>
+	<red> 255 </red>
+	<green> 0 </green>
+	<blue> 0 </blue>
+	<filename> Interface\Stentorious\SWHC_Skull.dds </filename>
+</image>
