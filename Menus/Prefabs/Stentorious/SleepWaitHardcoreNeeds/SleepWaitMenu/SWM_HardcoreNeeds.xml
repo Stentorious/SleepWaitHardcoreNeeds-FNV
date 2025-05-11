@@ -78,6 +78,13 @@
 			<sub>
 				<copy src="child(Icon)" trait="width" />
 				<mul> 1.3 </mul>
+				<add>
+					<copy> 12 </copy>
+					<onlyif>
+						<copy src="io()" trait="_SWHC+UIMod" />
+						<eq> 1 </eq>
+					</onlyif>
+				</add>
 				<onlyif src="io()" trait="_SWHC+MAPMO" />
 			</sub>
 		</x>
