@@ -4,12 +4,10 @@
 	<locus> 1 </locus>
 	<x> <copy src="sibling(SWM_HoursChosen)" trait="x" /> </x>
 	<y>
-		<copy src="sibling(SWM_HoursChosen)" trait="y" />
+		<copy src="sibling(SWM_HoursChosen)" trait="height" />
+		<div> 3 </div>
+		<add src="sibling(SWM_HoursChosen)" trait="y" />
 		<add src="sibling(SWM_HoursChosen)" trait="height" />
-		<add>
-			<copy src="sibling(SWM_HoursChosen)" trait="height" />
-			<div> 3 </div>
-		</add>
 	</y>
 	<font> <copy src="sibling(SWM_HoursChosen)" trait="font" /> </font>
 

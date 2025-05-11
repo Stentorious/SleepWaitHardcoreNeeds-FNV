@@ -66,12 +66,9 @@
 	</x>
 	<systemcolor> 0 </systemcolor>
 	<red>
-		<copy> 0 </copy>
-		<add>
-			<copy src="parent()" trait="_value" />
-			<div src="parent()" trait="_stage_1" />
-			<mul> 255 </mul>
-		</add>
+		<copy src="parent()" trait="_value" />
+		<div src="parent()" trait="_stage_1" />
+		<mul> 255 </mul>
 		<max> 0 </max>
 		<min> 255 </min>
 	</red>
