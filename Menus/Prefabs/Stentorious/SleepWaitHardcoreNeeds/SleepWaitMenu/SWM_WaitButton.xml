@@ -11,4 +11,5 @@
 			<gte> 1000 </gte>
 		</or>
 	</not>
+	<or> <not src="io()" trait="_SWHC+HC" /> </or>
 </target>
