@@ -22,6 +22,7 @@ if GetPluginVersion "UI Organizer Plugin" < 230
 endif
 
 ; Load INI settings
+SetUIFloatAlt "HUDMainMenu\_SWHC+Death" (eval GetINIFloat "General:bPreventDeath" "Stentorious\SleepWaitHardcoreNeeds.ini")
 SetUIFloatAlt "HUDMainMenu\_SWHC+MAPMO" (eval IsModLoaded "Main And Pause Menus Overhaul.esm" && GetINIFloat "General:bMAPMOIconsSupport" "Stentorious\SleepWaitHardcoreNeeds.ini")
 
 ; Build needs strings
