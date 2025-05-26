@@ -1,0 +1,19 @@
+int	iMenuID
+
+begin Function {iMenuID}
+
+	if eval Player.IsHardcore == 0
+		return
+	endif
+
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" (eval Sv_Find (GetStringSetting "sSleep") (GetUIString "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_WaitButton\string") != -1)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSH2OD" (GetNumericGameSetting "FHCDehydrationRate")
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSFODD" (GetNumericGameSetting "FHCStarvationrate")
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSSLPD" (GetNumericGameSetting "FHCSleepDeprivationRate")
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSSLPR" (GetNumericGameSetting "fHCSleepRestorationMod")
+
+end

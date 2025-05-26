@@ -24,10 +24,15 @@
 <_SWHC+HC> 0 </_SWHC+HC>
 <_SWHC+SW> 0 </_SWHC+SW>
 
+<!-- Progression Rates -->
+<_SWHC+GSH2OD> &-FHCDehydrationRate; </_SWHC+GSH2OD>
+<_SWHC+GSFODD> &-FHCStarvationrate; </_SWHC+GSFODD>
+<_SWHC+GSSLPD> &-FHCSleepDeprivationRate; </_SWHC+GSSLPD>
+<_SWHC+GSSLPR> &-fHCSleepRestorationMod; </_SWHC+GSSLPR>
 <_SWHC+H2OD>
 	<copy> 120 </copy>
 	<div>
-		<copy> &-FHCDehydrationRate; </copy>
+		<copy src="me()" trait="_SWHC+GSH2OD" />
 		<max> 1 </max>
 	</div>
 	<floor></floor>
@@ -35,7 +40,7 @@
 <_SWHC+FODD>
 	<copy> 120 </copy>
 	<div>
-		<copy> &-FHCStarvationrate; </copy>
+		<copy src="me()" trait="_SWHC+GSFODD" />
 		<max> 1 </max>
 	</div>
 	<floor></floor>
@@ -43,13 +48,13 @@
 <_SWHC+SLPD>
 	<copy> 120 </copy>
 	<div>
-		<copy> &-FHCSleepDeprivationRate; </copy>
+		<copy src="me()" trait="_SWHC+GSSLPD" />
 		<max> 1 </max>
 	</div>
 	<floor></floor>
 </_SWHC+SLPD>
 <_SWHC+SLPR>
-	<copy> &-fHCSleepRestorationMod; </copy>
+	<copy src="me()" trait="_SWHC+GSSLPR" />
 	<floor></floor>
 </_SWHC+SLPR>
 

@@ -7,6 +7,11 @@ endif
 Goo1.AuxVarSetFlt "*SWHC_Init" 1
 
 ; Check for requirements
+if GetNVSEVersion > 5 && GetNVSERevision > 2 && GetNVSEBeta > 9
+else
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall xNVSE 6.3.10+."
+	return
+endif
 if GetPluginVersion "JohnnyGuitarNVSE" < 511
 	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest JohnnyGuitar NVSE plugin."
 	return
@@ -49,15 +54,7 @@ SetUIFloatAlt "HUDMainMenu\_SWHC+SLP5" (GetHardcoreStageThreshold sleep5)
 SetUIFloatGradual "HUDMainMenu\_SWHC+AP" 0 0.85 1.5 2
 
 ; Init SWHC on SleepWaitMenu open
-SetOnMenuOpenEventHandler (begin function {int iMenuID}
-	if Player.IsHardcore
-		SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
-		SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" (eval Sv_Find (GetStringSetting sSleep) (GetUIString "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_WaitButton\string") != -1)
-		SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
-		SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
-		SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
-	endif
-end) 1 1012
+SetOnMenuOpenEventHandler (CompileScript "SleepWaitHardcoreNeeds\OpenSleepWaitMenu.gek") 1 1012
 
 ; Update current time on sleep/wait start
 SetJohnnyOnSleepWaitEventHandler 1 (begin function {int iMode}
