@@ -8,7 +8,7 @@ Goo1.AuxVarSetFlt "*SWHC_Init" 1
 
 ; Check for requirements
 if eval GetNVSEVersion < 6 || (GetNVSEVersion == 6 && GetNVSERevision < 4)
-	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall xNVSE 6.3.10+."
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall xNVSE 6.4.0+."
 	return
 endif
 if GetPluginVersion "JohnnyGuitarNVSE" < 511
