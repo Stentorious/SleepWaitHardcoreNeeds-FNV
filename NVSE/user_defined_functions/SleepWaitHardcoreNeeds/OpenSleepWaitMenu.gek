@@ -7,7 +7,7 @@ begin Function {iMenuID}
 	endif
 
 	SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" (eval Sv_Find (GetStringSetting "sSleep") (GetUIString "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_WaitButton\string") != -1)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" ((GetSleepWaitMenuState) - 1)
 	SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
 	SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
 	SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
