@@ -56,6 +56,7 @@
 			<copy src="io()" trait="_SWHC+H2OD" />
 			<mul src="parent()" trait="_time" />
 			<add src="io()" trait="_SWHC+H2O" />
+			<min src="io()" trait="_SWHC+H2O5" />
 		</_value>
 		<_stage_1> <copy src="io()" trait="_SWHC+H2O1" /> </_stage_1>
 		<_stage_2> <copy src="io()" trait="_SWHC+H2O2" /> </_stage_2>
@@ -92,6 +93,7 @@
 			<copy src="io()" trait="_SWHC+FODD" />
 			<mul src="parent()" trait="_time" />
 			<add src="io()" trait="_SWHC+FOD" />
+			<min src="io()" trait="_SWHC+FOD5" />
 		</_value>
 		<_stage_1> <copy src="io()" trait="_SWHC+FOD1" /> </_stage_1>
 		<_stage_2> <copy src="io()" trait="_SWHC+FOD2" /> </_stage_2>
@@ -148,7 +150,8 @@
 				</sub>
 				<onlyif src="io()" trait="_SWHC+SW" />
 			</add>
-			<max> <copy src="io()" trait="_SWHC+SLPD" /> </max>
+			<max src="io()" trait="_SWHC+SLPD" />
+			<min src="io()" trait="_SWHC+SLP5" />
 		</_value>
 		<_stage_1> <copy src="io()" trait="_SWHC+SLP1" /> </_stage_1>
 		<_stage_2> <copy src="io()" trait="_SWHC+SLP2" /> </_stage_2>
