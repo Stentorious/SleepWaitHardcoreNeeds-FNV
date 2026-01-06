@@ -12,7 +12,7 @@
 	<y>
 		<copy> 3 </copy>
 		<onlyif>
-			<copy src="io()" trait="_SWHC+UIMod" />
+			<copy src="io()" trait="_Menu+UIMod" />
 			<eq> 1 </eq>
 		</onlyif>
 		<sub>
@@ -36,7 +36,7 @@
 		<mul>
 			<copy> 1 </copy>
 			<sub>
-				<copy src="io()" trait="_SWHC+AP" />
+				<copy src="io()" trait="_SWHC+Pulse" />
 				<onlyif>
 					<copy src="parent()" trait="_value" />
 					<gte src="parent()" trait="_stage_4" />
@@ -57,7 +57,7 @@
 			<add>
 				<copy> 16 </copy>
 				<onlyif>
-					<copy src="io()" trait="_SWHC+UIMod" />
+					<copy src="io()" trait="_Menu+UIMod" />
 					<eq> 1 </eq>
 				</onlyif>
 			</add>

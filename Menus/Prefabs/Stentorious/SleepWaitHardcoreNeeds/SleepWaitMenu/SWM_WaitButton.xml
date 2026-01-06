@@ -1,16 +1,16 @@
 <target>
 	<not>
 		<copy src="H2O" trait="_value" />
-		<gte src="io()" trait="_SWHC+H2O5" />
+		<gte src="io()" trait="_PlrStat+H2O5" />
 		<or>
 			<copy src="FOD" trait="_value" />
-			<gte src="io()" trait="_SWHC+FOD5" />
+			<gte src="io()" trait="_PlrStat+FOD5" />
 		</or>
 		<or>
 			<copy src="SLP" trait="_value" />
-			<gte src="io()" trait="_SWHC+SLP5" />
+			<gte src="io()" trait="_PlrStat+SLP5" />
 		</or>
 	</not>
-	<or> <not src="io()" trait="_SWHC+HC" /> </or>
+	<or> <not src="io()" trait="_Setting+Hardcore" /> </or>
 	<or> <not src="io()" trait="_SWHC+Death" /> </or>
 </target>

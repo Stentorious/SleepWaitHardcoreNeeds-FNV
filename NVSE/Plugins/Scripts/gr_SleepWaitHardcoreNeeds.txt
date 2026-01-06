@@ -1,0 +1,52 @@
+; Sleep Wait Hardcore Needs - Stentorious
+
+; Check for requirements
+if eval GetNVSEVersionFull < 6.40
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall xNVSE 6.4.0+."
+	return
+endif
+if GetPluginVersion "JohnnyGuitarNVSE" < 519
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest JohnnyGuitar NVSE plugin."
+	return
+endif
+if GetPluginVersion "UI Organizer Plugin" < 230
+	MessageBoxEx "Sleep Wait Hardcore Needs missing requirement!%rInstall latest User Interface Organizer plugin."
+	return
+endif
+
+; Load INI settings
+SetUIFloatAlt "HUDMainMenu\_SWHC+Death" (eval GetINIFloat "General:bPreventDeath" "Stentorious\SleepWaitHardcoreNeeds.ini")
+SetUIFloatAlt "HUDMainMenu\_SWHC+MAPMO" (eval IsModLoaded "Main And Pause Menus Overhaul.esm" && GetINIFloat "General:bMAPMOIconsSupport" "Stentorious\SleepWaitHardcoreNeeds.ini")
+
+; Cache dehydration stages
+SetUIFloatAlt "HUDMainMenu\_PlrStat+H2O1" (GetHardcoreStageThreshold water1)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+H2O2" (GetHardcoreStageThreshold water2)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+H2O3" (GetHardcoreStageThreshold water3)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+H2O4" (GetHardcoreStageThreshold water4)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+H2O5" (GetHardcoreStageThreshold water5)
+
+; Cache hunger stages
+SetUIFloatAlt "HUDMainMenu\_PlrStat+FOD1" (GetHardcoreStageThreshold hunger1)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+FOD2" (GetHardcoreStageThreshold hunger2)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+FOD3" (GetHardcoreStageThreshold hunger3)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+FOD4" (GetHardcoreStageThreshold hunger4)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+FOD5" (GetHardcoreStageThreshold hunger5)
+
+; Cache sleep stages
+SetUIFloatAlt "HUDMainMenu\_PlrStat+SLP1" (GetHardcoreStageThreshold sleep1)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+SLP2" (GetHardcoreStageThreshold sleep2)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+SLP3" (GetHardcoreStageThreshold sleep3)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+SLP4" (GetHardcoreStageThreshold sleep4)
+SetUIFloatAlt "HUDMainMenu\_PlrStat+SLP5" (GetHardcoreStageThreshold sleep5)
+
+; Init SWHC on SleepWaitMenu open
+SetOnMenuOpenEventHandler (CompileScript "SleepWaitHardcoreNeeds\OpenSleepWaitMenu.gek") 1 1012
+
+; Update current time on sleep/wait start
+SetJohnnyOnSleepWaitEventHandler 1 ({int iMode} => SetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time_main" (GetUIFloatAlt "SleepWaitMenu\NOGLOW_BRANCH\SWM_MainRect\SWM_HardcoreNeeds\_time")) 0 0
+
+; Stat updates
+if eval GetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" == -1
+	SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)
+	SetOnSettingsUpdateEventHandler 1 ({} => SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)) 0
+endif

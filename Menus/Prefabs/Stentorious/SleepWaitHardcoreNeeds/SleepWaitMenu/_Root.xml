@@ -1,83 +1,50 @@
-<_SWHC+H2OS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2OS" /> </_SWHC+H2OS>
-<_SWHC+FODS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FODS" /> </_SWHC+FODS>
-<_SWHC+SLPS> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLPS" /> </_SWHC+SLPS>
-<_SWHC+H2O1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O1" /> </_SWHC+H2O1>
-<_SWHC+H2O2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O2" /> </_SWHC+H2O2>
-<_SWHC+H2O3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O3" /> </_SWHC+H2O3>
-<_SWHC+H2O4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O4" /> </_SWHC+H2O4>
-<_SWHC+H2O5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+H2O5" /> </_SWHC+H2O5>
-<_SWHC+FOD1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD1" /> </_SWHC+FOD1>
-<_SWHC+FOD2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD2" /> </_SWHC+FOD2>
-<_SWHC+FOD3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD3" /> </_SWHC+FOD3>
-<_SWHC+FOD4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD4" /> </_SWHC+FOD4>
-<_SWHC+FOD5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+FOD5" /> </_SWHC+FOD5>
-<_SWHC+SLP1> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP1" /> </_SWHC+SLP1>
-<_SWHC+SLP2> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP2" /> </_SWHC+SLP2>
-<_SWHC+SLP3> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP3" /> </_SWHC+SLP3>
-<_SWHC+SLP4> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP4" /> </_SWHC+SLP4>
-<_SWHC+SLP5> <copy src="sibling(HUDMainMenu)" trait="_SWHC+SLP5" /> </_SWHC+SLP5>
-<_SWHC+AP> <copy src="sibling(HUDMainMenu)" trait="_SWHC+AP" /> </_SWHC+AP>
+<!-- Menu Traits -->
+<_Menu+UIMod> <copy src="sibling(HUDMainMenu)" trait="_Menu+UIMod" /> </_Menu+UIMod>
+
+<!-- Settings -->
+<_Setting+Hardcore> <copy src="sibling(HUDMainMenu)" trait="_Setting+Hardcore" /> </_Setting+Hardcore>
+
+<!-- Player Stats -->
+<_PlrStat+H2O1> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O1" /> </_PlrStat+H2O1>
+<_PlrStat+H2O2> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O2" /> </_PlrStat+H2O2>
+<_PlrStat+H2O3> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O3" /> </_PlrStat+H2O3>
+<_PlrStat+H2O4> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O4" /> </_PlrStat+H2O4>
+<_PlrStat+H2O5> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O5" /> </_PlrStat+H2O5>
+<_PlrStat+FOD1> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FOD1" /> </_PlrStat+FOD1>
+<_PlrStat+FOD2> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FOD2" /> </_PlrStat+FOD2>
+<_PlrStat+FOD3> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FOD3" /> </_PlrStat+FOD3>
+<_PlrStat+FOD4> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FOD4" /> </_PlrStat+FOD4>
+<_PlrStat+FOD5> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FOD5" /> </_PlrStat+FOD5>
+<_PlrStat+SLP1> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLP1" /> </_PlrStat+SLP1>
+<_PlrStat+SLP2> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLP2" /> </_PlrStat+SLP2>
+<_PlrStat+SLP3> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLP3" /> </_PlrStat+SLP3>
+<_PlrStat+SLP4> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLP4" /> </_PlrStat+SLP4>
+<_PlrStat+SLP5> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLP5" /> </_PlrStat+SLP5>
+<_PlrStat+H2ORate> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2ORate" /> </_PlrStat+H2ORate>
+<_PlrStat+FODRate> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+FODRate" /> </_PlrStat+FODRate>
+<_PlrStat+SLPRate> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLPRate" /> </_PlrStat+SLPRate>
+<_PlrStat+SLPRatePos> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+SLPRatePos" /> </_PlrStat+SLPRatePos>
+
+<!-- Config Settings -->
 <_SWHC+MAPMO> <copy src="sibling(HUDMainMenu)" trait="_SWHC+MAPMO" /> </_SWHC+MAPMO>
 <_SWHC+Death> <copy src="sibling(HUDMainMenu)" trait="_SWHC+Death" /> </_SWHC+Death>
-<_SWHC+H2O> 0 </_SWHC+H2O>
-<_SWHC+FOD> 0 </_SWHC+FOD>
-<_SWHC+SLP> 0 </_SWHC+SLP>
-<_SWHC+HC> 0 </_SWHC+HC>
-<_SWHC+SW> 0 </_SWHC+SW>
+
+<!-- Scripting -->
+<_SWHC+H2OTemp> 0 </_SWHC+H2OTemp>
+<_SWHC+FODTemp> 0 </_SWHC+FODTemp>
+<_SWHC+SLPTemp> 0 </_SWHC+SLPTemp>
+<_SWHC+State> 0 </_SWHC+State>
+<_SWHC+Pulse> 0 </_SWHC+Pulse>
 
 <!-- Progression Rates -->
-<_SWHC+GSH2OD> &-FHCDehydrationRate; </_SWHC+GSH2OD>
-<_SWHC+GSFODD> &-FHCStarvationrate; </_SWHC+GSFODD>
-<_SWHC+GSSLPD> &-FHCSleepDeprivationRate; </_SWHC+GSSLPD>
-<_SWHC+GSSLPR> &-fHCSleepRestorationMod; </_SWHC+GSSLPR>
-<_SWHC+H2OD>
+<_PlrStat+SLPRateCalc>
 	<copy> 120 </copy>
 	<div>
-		<copy src="me()" trait="_SWHC+GSH2OD" />
+		<copy src="me()" trait="_PlrStat+SLPRate" />
 		<max> 1 </max>
 	</div>
 	<floor></floor>
-</_SWHC+H2OD>
-<_SWHC+FODD>
-	<copy> 120 </copy>
-	<div>
-		<copy src="me()" trait="_SWHC+GSFODD" />
-		<max> 1 </max>
-	</div>
-	<floor></floor>
-</_SWHC+FODD>
-<_SWHC+SLPD>
-	<copy> 120 </copy>
-	<div>
-		<copy src="me()" trait="_SWHC+GSSLPD" />
-		<max> 1 </max>
-	</div>
-	<floor></floor>
-</_SWHC+SLPD>
-<_SWHC+SLPR>
-	<copy src="me()" trait="_SWHC+GSSLPR" />
-	<floor></floor>
-</_SWHC+SLPR>
-
-<_SWHC+UIMod>
-	<copy> 0 </copy>									<!-- Vanilla -->
-	<add src="sibling(HUDMainMenu)" trait="_DUIF3"/>	<!-- DarNUI -->
-	<add>
-		<copy> 3 </copy>
-		<onlyif>
-			<copy src="globals" trait="_VUI+Vegas"/>	<!-- VUI+ -->
-			<or src="globals" trait="_VUI+Version"/>
-		</onlyif>
-	</add>
-	<add>
-		<copy> -1 </copy>
-		<onlyif src="globals" trait="_VUI+"/>			<!-- Revelations -->
-	</add>
-	<add>
-		<copy> 2 </copy>
-		<onlyif src="globals" trait="_VUIE"/>			<!-- VUIE -->
-	</add>
-</_SWHC+UIMod>
+</_PlrStat+SLPRateCalc>
 
 <!-- Vanilla -->
 <_SWHC+ySIWidth_0> 32 </_SWHC+ySIWidth_0>
@@ -100,10 +67,10 @@
 <_SWHC+ySIOffset_4> -5 </_SWHC+ySIOffset_4>
 
 <_SWHC+ySIWidth>
-	<copy src="me()" trait="_SWHC+UIMod"/>
-	<copy src="me()" trait="_SWHC+ySIWidth_"/>
+	<copy src="me()" trait="_Menu+UIMod" />
+	<copy src="me()" trait="_SWHC+ySIWidth_" />
 </_SWHC+ySIWidth>
 <_SWHC+ySIOffset>
-	<copy src="me()" trait="_SWHC+UIMod"/>
-	<copy src="me()" trait="_SWHC+ySIOffset_"/>
+	<copy src="me()" trait="_Menu+UIMod" />
+	<copy src="me()" trait="_SWHC+ySIOffset_" />
 </_SWHC+ySIOffset>

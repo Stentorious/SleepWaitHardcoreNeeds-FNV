@@ -1,21 +1,45 @@
-<_SWHC+H2OS> H2O: </_SWHC+H2OS>
-<_SWHC+FODS> FOD: </_SWHC+FODS>
-<_SWHC+SLPS> SLP: </_SWHC+SLPS>
-<_SWHC+H2O1> 0 </_SWHC+H2O1>
-<_SWHC+H2O2> 0 </_SWHC+H2O2>
-<_SWHC+H2O3> 0 </_SWHC+H2O3>
-<_SWHC+H2O4> 0 </_SWHC+H2O4>
-<_SWHC+H2O5> 0 </_SWHC+H2O5>
-<_SWHC+FOD1> 0 </_SWHC+FOD1>
-<_SWHC+FOD2> 0 </_SWHC+FOD2>
-<_SWHC+FOD3> 0 </_SWHC+FOD3>
-<_SWHC+FOD4> 0 </_SWHC+FOD4>
-<_SWHC+FOD5> 0 </_SWHC+FOD5>
-<_SWHC+SLP1> 0 </_SWHC+SLP1>
-<_SWHC+SLP2> 0 </_SWHC+SLP2>
-<_SWHC+SLP3> 0 </_SWHC+SLP3>
-<_SWHC+SLP4> 0 </_SWHC+SLP4>
-<_SWHC+SLP5> 0 </_SWHC+SLP5>
-<_SWHC+AP> 0 </_SWHC+AP>
-<_SWHC+MAPMO> 0 </_SWHC+MAPMO>
+<!-- Menu Traits -->
+<_Menu+UIMod>
+	<copy> 3 </copy>
+	<onlyif>
+		<copy src="globals()" trait="_VUI+Vegas" />		<!-- VUI+ -->
+		<or src="globals()" trait="_VUI+Version" />
+	</onlyif>
+	<add>
+		<copy> -1 </copy>
+		<onlyif src="globals()" trait="_VUI+" />			<!-- Revelations -->
+	</add>
+	<add>
+		<copy> 2 </copy>
+		<onlyif src="globals()" trait="_VUIE" />			<!-- VUIE -->
+	</add>
+	<add src="io()" trait="_DUIF3" />					<!-- DarNUI -->
+</_Menu+UIMod>
+
+<!-- Settings -->
+<_Setting+Hardcore> -1 </_Setting+Hardcore>
+
+<!-- Player Stats -->
+<_PlrStat+H2O1> 0 </_PlrStat+H2O1>
+<_PlrStat+H2O2> 0 </_PlrStat+H2O2>
+<_PlrStat+H2O3> 0 </_PlrStat+H2O3>
+<_PlrStat+H2O4> 0 </_PlrStat+H2O4>
+<_PlrStat+H2O5> 0 </_PlrStat+H2O5>
+<_PlrStat+FOD1> 0 </_PlrStat+FOD1>
+<_PlrStat+FOD2> 0 </_PlrStat+FOD2>
+<_PlrStat+FOD3> 0 </_PlrStat+FOD3>
+<_PlrStat+FOD4> 0 </_PlrStat+FOD4>
+<_PlrStat+FOD5> 0 </_PlrStat+FOD5>
+<_PlrStat+SLP1> 0 </_PlrStat+SLP1>
+<_PlrStat+SLP2> 0 </_PlrStat+SLP2>
+<_PlrStat+SLP3> 0 </_PlrStat+SLP3>
+<_PlrStat+SLP4> 0 </_PlrStat+SLP4>
+<_PlrStat+SLP5> 0 </_PlrStat+SLP5>
+<_PlrStat+H2ORate> &-FHCDehydrationRate; </_PlrStat+H2ORate>
+<_PlrStat+FODRate> &-FHCStarvationrate; </_PlrStat+FODRate>
+<_PlrStat+SLPRate> &-FHCSleepDeprivationRate; </_PlrStat+SLPRate>
+<_PlrStat+SLPRatePos> &-fHCSleepRestorationMod; </_PlrStat+SLPRatePos>
+
+<!-- Config Settings -->
 <_SWHC+Death> 1 </_SWHC+Death>
+<_SWHC+MAPMO> 0 </_SWHC+MAPMO>

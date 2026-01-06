@@ -1,6 +1,6 @@
 <rect name="SWM_HardcoreNeeds">
 
-	<visible> <copy src="io()" trait="_SWHC+HC" /> </visible>
+	<visible> <copy src="io()" trait="_Setting+Hardcore" /> </visible>
 	<locus> 1 </locus>
 	<x> <copy src="sibling(SWM_HoursChosen)" trait="x" /> </x>
 	<y>
@@ -13,12 +13,10 @@
 
 	<_time_main> 0 </_time_main>
 	<_time>
-		<copy src="me()" trait="_time_main" />
-		<add>
-			<copy src="sibling(SWM_Scrollbar)" trait="_current_value" />
-			<add> 1 </add>
-			<onlyifnot src="me()" trait="_time_main" />
-		</add>
+		<copy src="sibling(SWM_Scrollbar)" trait="_current_value" />
+		<add> 1 </add>
+		<onlyifnot src="me()" trait="_time_main" />
+		<add src="me()" trait="_time_main" />
 		<sub>
 			<copy src="sibling(SWM_Scrollbar)" trait="_current_value" />
 			<add> 1 </add>
@@ -46,24 +44,29 @@
 				<add>
 					<copy> 30 </copy>
 					<onlyif>
-						<copy src="io()" trait="_SWHC+UIMod" />
+						<copy src="io()" trait="_Menu+UIMod" />
 						<eq> 1 </eq>
 					</onlyif>
 				</add>
 			</sub>
 		</x>
 		<_value>
-			<copy src="io()" trait="_SWHC+H2OD" />
+			<copy> 120 </copy>
+			<div>
+				<copy src="io()" trait="_PlrStat+H2ORate" />
+				<max> 1 </max>
+			</div>
+			<floor></floor>
 			<mul src="parent()" trait="_time" />
-			<add src="io()" trait="_SWHC+H2O" />
-			<min src="io()" trait="_SWHC+H2O5" />
+			<add src="io()" trait="_SWHC+H2OTemp" />
+			<min src="io()" trait="_PlrStat+H2O5" />
 		</_value>
-		<_stage_1> <copy src="io()" trait="_SWHC+H2O1" /> </_stage_1>
-		<_stage_2> <copy src="io()" trait="_SWHC+H2O2" /> </_stage_2>
-		<_stage_3> <copy src="io()" trait="_SWHC+H2O3" /> </_stage_3>
-		<_stage_4> <copy src="io()" trait="_SWHC+H2O4" /> </_stage_4>
-		<_stage_5> <copy src="io()" trait="_SWHC+H2O5" /> </_stage_5>
-		<_label> <copy src="io()" trait="_SWHC+H2OS" /> </_label>
+		<_stage_1> <copy src="io()" trait="_PlrStat+H2O1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_PlrStat+H2O2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_PlrStat+H2O3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_PlrStat+H2O4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_PlrStat+H2O5" /> </_stage_5>
+		<_label> &SStatsH20Abbrev;&sKBColon; </_label>
 		<_icon> MAPMO\water.dds </_icon>
 	</rect>
 
@@ -82,7 +85,7 @@
 				<add>
 					<copy> 12 </copy>
 					<onlyif>
-						<copy src="io()" trait="_SWHC+UIMod" />
+						<copy src="io()" trait="_Menu+UIMod" />
 						<eq> 1 </eq>
 					</onlyif>
 				</add>
@@ -90,17 +93,22 @@
 			</sub>
 		</x>
 		<_value>
-			<copy src="io()" trait="_SWHC+FODD" />
+			<copy> 120 </copy>
+			<div>
+				<copy src="io()" trait="_PlrStat+FODRate" />
+				<max> 1 </max>
+			</div>
+			<floor></floor>
 			<mul src="parent()" trait="_time" />
-			<add src="io()" trait="_SWHC+FOD" />
-			<min src="io()" trait="_SWHC+FOD5" />
+			<add src="io()" trait="_SWHC+FODTemp" />
+			<min src="io()" trait="_PlrStat+FOD5" />
 		</_value>
-		<_stage_1> <copy src="io()" trait="_SWHC+FOD1" /> </_stage_1>
-		<_stage_2> <copy src="io()" trait="_SWHC+FOD2" /> </_stage_2>
-		<_stage_3> <copy src="io()" trait="_SWHC+FOD3" /> </_stage_3>
-		<_stage_4> <copy src="io()" trait="_SWHC+FOD4" /> </_stage_4>
-		<_stage_5> <copy src="io()" trait="_SWHC+FOD5" /> </_stage_5>
-		<_label> <copy src="io()" trait="_SWHC+FODS" /> </_label>
+		<_stage_1> <copy src="io()" trait="_PlrStat+FOD1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_PlrStat+FOD2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_PlrStat+FOD3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_PlrStat+FOD4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_PlrStat+FOD5" /> </_stage_5>
+		<_label> &sStatsFODAbbrev;&sKBColon; </_label>
 		<_icon> MAPMO\food.dds </_icon>
 	</text>
 
@@ -111,11 +119,8 @@
 			<add>
 				<copy src="io()" trait="_SWHC+ySIWidth" />
 				<mul>
-					<copy> 0 </copy>
-					<add>
-						<copy> 5.5 </copy>
-						<onlyifnot src="io()" trait="_SWHC+MAPMO" />
-					</add>
+					<copy> 5.5 </copy>
+					<onlyifnot src="io()" trait="_SWHC+MAPMO" />
 					<add>
 						<copy> 4.2 </copy>
 						<onlyif src="io()" trait="_SWHC+MAPMO" />
@@ -124,41 +129,39 @@
 				<add>
 					<copy> 30 </copy>
 					<onlyif>
-						<copy src="io()" trait="_SWHC+UIMod" />
+						<copy src="io()" trait="_Menu+UIMod" />
 						<eq> 1 </eq>
 					</onlyif>
 				</add>
 			</add>
 		</x>
 		<_value>
-			<copy> 0 </copy>
-			<add>
-				<copy src="io()" trait="_SWHC+SLPD" />
-				<onlyifnot src="io()" trait="_SWHC+SW" />
-			</add>
+			<copy src="io()" trait="_PlrStat+SLPRateCalc" />
+			<onlyifnot src="io()" trait="_SWHC+State" />
 			<sub>
-				<copy src="io()" trait="_SWHC+SLPR" />
-				<onlyif src="io()" trait="_SWHC+SW" />
+				<copy src="io()" trait="_PlrStat+SLPRatePos" />
+				<floor></floor>
+				<onlyif src="io()" trait="_SWHC+State" />
 			</sub>
 			<mul src="parent()" trait="_time" />
-			<add src="io()" trait="_SWHC+SLP" />
+			<add src="io()" trait="_SWHC+SLPTemp" />
 			<add>
-				<copy src="io()" trait="_SWHC+SLPD" />
+				<copy src="io()" trait="_PlrStat+SLPRateCalc" />
 				<sub>
-					<copy src="io()" trait="_SWHC+SLPD" />
+					<copy src="io()" trait="_PlrStat+SLPRateCalc" />
 					<onlyifnot src="parent()" trait="_time" />
 				</sub>
-				<onlyif src="io()" trait="_SWHC+SW" />
+				<onlyif src="io()" trait="_SWHC+State" />
 			</add>
-			<max src="io()" trait="_SWHC+SLPD" />
-			<min src="io()" trait="_SWHC+SLP5" />
+			<max src="io()" trait="_PlrStat+SLPRateCalc" />
+			<min src="io()" trait="_PlrStat+SLP5" />
 		</_value>
-		<_stage_1> <copy src="io()" trait="_SWHC+SLP1" /> </_stage_1>
-		<_stage_2> <copy src="io()" trait="_SWHC+SLP2" /> </_stage_2>
-		<_stage_3> <copy src="io()" trait="_SWHC+SLP3" /> </_stage_3>
-		<_stage_4> <copy src="io()" trait="_SWHC+SLP4" /> </_stage_4>
-		<_stage_5> <copy src="io()" trait="_SWHC+SLP5" /> </_stage_5>
-		<_label> <copy src="io()" trait="_SWHC+SLPS" /> </_label>
+		<_stage_1> <copy src="io()" trait="_PlrStat+SLP1" /> </_stage_1>
+		<_stage_2> <copy src="io()" trait="_PlrStat+SLP2" /> </_stage_2>
+		<_stage_3> <copy src="io()" trait="_PlrStat+SLP3" /> </_stage_3>
+		<_stage_4> <copy src="io()" trait="_PlrStat+SLP4" /> </_stage_4>
+		<_stage_5> <copy src="io()" trait="_PlrStat+SLP5" /> </_stage_5>
+		<_label> &sStatsSLPAbbrev;&sKBColon; </_label>
 		<_icon> MAPMO\sleep.dds </_icon>
 	</text>
 

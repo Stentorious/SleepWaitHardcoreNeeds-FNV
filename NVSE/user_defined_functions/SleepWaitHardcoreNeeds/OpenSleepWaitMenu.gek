@@ -2,18 +2,17 @@ int	iMenuID
 
 begin Function {iMenuID}
 
-	if eval Player.IsHardcore == 0
-		return
-	endif
+	SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)
+	SetUIFloatAlt "HUDMainMenu\_PlrStat+H2ORate" (GetNumericGameSetting "FHCDehydrationRate")
+	SetUIFloatAlt "HUDMainMenu\_PlrStat+FODRate" (GetNumericGameSetting "FHCStarvationrate")
+	SetUIFloatAlt "HUDMainMenu\_PlrStat+SLPRate" (GetNumericGameSetting "FHCSleepDeprivationRate")
+	SetUIFloatAlt "HUDMainMenu\_PlrStat+SLPRatePos" (GetNumericGameSetting "fHCSleepRestorationMod")
 
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+HC" 1
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+SW" ((GetSleepWaitMenuState) - 1)
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+H2O" (Player.GetAV Dehydration)
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+FOD" (Player.GetAV Hunger)
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+SLP" (Player.GetAV SleepDeprevation)
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSH2OD" (GetNumericGameSetting "FHCDehydrationRate")
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSFODD" (GetNumericGameSetting "FHCStarvationrate")
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSSLPD" (GetNumericGameSetting "FHCSleepDeprivationRate")
-	SetUIFloatAlt "SleepWaitMenu\_SWHC+GSSLPR" (GetNumericGameSetting "fHCSleepRestorationMod")
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+State" ((GetSleepWaitMenuState) - 1)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+H2OTemp" (Player.GetAV Dehydration)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+FODTemp" (Player.GetAV Hunger)
+	SetUIFloatAlt "SleepWaitMenu\_SWHC+SLPTemp" (Player.GetAV SleepDeprevation)
+	SetUIFloatGradual "SleepWaitMenu\_SWHC+Pulse" 0
+	SetUIFloatGradual "SleepWaitMenu\_SWHC+Pulse" 0 0.85 1.5 2
 
 end
