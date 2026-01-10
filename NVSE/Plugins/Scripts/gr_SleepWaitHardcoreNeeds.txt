@@ -47,6 +47,6 @@ SetJohnnyOnSleepWaitEventHandler 1 ({int iMode} => SetUIFloatAlt "SleepWaitMenu\
 
 ; Stat updates
 if eval GetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" == -1
-	SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)
 	SetOnSettingsUpdateEventHandler 1 ({} => SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)) 0
 endif
+SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)
