@@ -45,12 +45,9 @@
 		</mul>
 	</alpha>
 	<x>
-		<copy> 0 </copy>
-		<add>
-			<copy src="sibling(Label)" trait="width" />
-			<mul> 2.2 </mul>
-			<onlyifnot src="io()" trait="_SWHC+MAPMO" />
-		</add>
+		<copy src="sibling(Label)" trait="width" />
+		<mul> 2.2 </mul>
+		<onlyifnot src="io()" trait="_SWHC+MAPMO" />
 		<add>
 			<copy src="sibling(Icon)" trait="width" />
 			<mul> 2.45 </mul>

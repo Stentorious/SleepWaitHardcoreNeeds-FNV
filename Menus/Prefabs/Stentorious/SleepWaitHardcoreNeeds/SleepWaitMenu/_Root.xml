@@ -4,6 +4,9 @@
 <!-- Settings -->
 <_Setting+Hardcore> <copy src="sibling(HUDMainMenu)" trait="_Setting+Hardcore" /> </_Setting+Hardcore>
 
+<!-- Globals -->
+<_Global+TimeScale> <copy src="sibling(HUDMainMenu)" trait="_Global+TimeScale" /> </_Global+TimeScale>
+
 <!-- Player Stats -->
 <_PlrStat+H2O1> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O1" /> </_PlrStat+H2O1>
 <_PlrStat+H2O2> <copy src="sibling(HUDMainMenu)" trait="_PlrStat+H2O2" /> </_PlrStat+H2O2>
@@ -37,8 +40,13 @@
 <_SWHC+Pulse> 0 </_SWHC+Pulse>
 
 <!-- Progression Rates -->
+<_SWHC+TimeScaleCalc>
+	<copy> 3600 </copy>
+	<div src="io()" trait="_Global+TimeScale" />
+</_SWHC+TimeScaleCalc>
+
 <_PlrStat+SLPRateCalc>
-	<copy> 120 </copy>
+	<copy src="io()" trait="_SWHC+TimeScaleCalc" />
 	<div>
 		<copy src="me()" trait="_PlrStat+SLPRate" />
 		<max> 1 </max>

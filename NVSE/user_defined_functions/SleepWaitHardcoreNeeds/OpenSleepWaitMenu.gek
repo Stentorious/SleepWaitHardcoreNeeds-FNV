@@ -3,6 +3,9 @@ int	iMenuID
 begin Function {iMenuID}
 
 	SetUIFloatAlt "HUDMainMenu\_Setting+Hardcore" (Player.IsHardcore)
+
+	SetUIFloatAlt "HUDMainMenu\_Global+TimeScale" (GetGlobalVariable TimeScale)
+
 	SetUIFloatAlt "HUDMainMenu\_PlrStat+H2ORate" (GetNumericGameSetting "FHCDehydrationRate")
 	SetUIFloatAlt "HUDMainMenu\_PlrStat+FODRate" (GetNumericGameSetting "FHCStarvationrate")
 	SetUIFloatAlt "HUDMainMenu\_PlrStat+SLPRate" (GetNumericGameSetting "FHCSleepDeprivationRate")

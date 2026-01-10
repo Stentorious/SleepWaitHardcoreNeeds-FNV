@@ -19,6 +19,9 @@
 <!-- Settings -->
 <_Setting+Hardcore> -1 </_Setting+Hardcore>
 
+<!-- Globals -->
+<_Global+TimeScale> 0 </_Global+TimeScale>
+
 <!-- Player Stats -->
 <_PlrStat+H2O1> 0 </_PlrStat+H2O1>
 <_PlrStat+H2O2> 0 </_PlrStat+H2O2>

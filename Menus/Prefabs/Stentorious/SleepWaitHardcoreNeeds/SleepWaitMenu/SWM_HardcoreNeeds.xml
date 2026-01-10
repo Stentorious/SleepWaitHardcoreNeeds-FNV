@@ -31,11 +31,8 @@
 			<sub>
 				<copy src="io()" trait="_SWHC+ySIWidth" />
 				<mul>
-					<copy> 0 </copy>
-					<add>
-						<copy> 5.5 </copy>
-						<onlyifnot src="io()" trait="_SWHC+MAPMO" />
-					</add>
+					<copy> 5.5 </copy>
+					<onlyifnot src="io()" trait="_SWHC+MAPMO" />
 					<add>
 						<copy> 4.2 </copy>
 						<onlyif src="io()" trait="_SWHC+MAPMO" />
@@ -51,7 +48,7 @@
 			</sub>
 		</x>
 		<_value>
-			<copy> 120 </copy>
+			<copy src="io()" trait="_SWHC+TimeScaleCalc" />
 			<div>
 				<copy src="io()" trait="_PlrStat+H2ORate" />
 				<max> 1 </max>
@@ -93,7 +90,7 @@
 			</sub>
 		</x>
 		<_value>
-			<copy> 120 </copy>
+			<copy src="io()" trait="_SWHC+TimeScaleCalc" />
 			<div>
 				<copy src="io()" trait="_PlrStat+FODRate" />
 				<max> 1 </max>
